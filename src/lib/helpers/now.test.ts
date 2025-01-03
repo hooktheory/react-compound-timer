@@ -1,9 +1,11 @@
 import now from './now';
 
+declare const global;
+
 describe('#now', () => {
-  let windowSpy: jest.SpyInstance;
-  let performanceSpy: jest.SpyInstance;
-  let dateSpy: jest.SpyInstance;
+  let windowSpy;
+  let performanceSpy;
+  let dateSpy;
 
   beforeEach(() => {
     windowSpy = jest.spyOn(global, 'window', 'get');
@@ -12,16 +14,16 @@ describe('#now', () => {
   });
 
   afterEach(() => {
-    jest.restoreAllMocks();
+    windowSpy.mockRestore();
   });
 
-  it('calls performance.now() when performance is in window', () => {
+  it('Calls performance.now() when performance is in window', () => {
     now();
 
     expect(performanceSpy).toHaveBeenCalled();
   });
 
-  it('calls Date.now() when window is not defined', () => {
+  it('Calls Date.now() when window is not defined', () => {
     windowSpy.mockImplementation(() => undefined);
 
     now();
@@ -29,7 +31,7 @@ describe('#now', () => {
     expect(dateSpy).toHaveBeenCalled();
   });
 
-  it('calls Date.now() when performance is not in window', () => {
+  it('Calls Date.now() when performance is not in window', () => {
     windowSpy.mockImplementation(() => { });
 
     now();

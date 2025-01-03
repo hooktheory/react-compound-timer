@@ -67,24 +67,22 @@ interface TimerProps {
   /** Function to format all values */
   formatValue?: (value: number) => string;
   /** Function that will be called on timer start */
-  onStart?: () => void;
+  onStart?: () => any;
   /** Function that will be called on timer resume */
-  onResume?: () => void;
+  onResume?: () => any;
   /** Function that will be called on timer pause */
-  onPause?: () => void;
+  onPause?: () => any;
   /** Function that will be called on timer stop */
-  onStop?: () => void;
+  onStop?: () => any;
   /** Function that will be called on timer reset */
-  onReset?: () => void;
+  onReset?: () => any;
   /** Last unit will accumulate time, for example, 26 hours or 90 seconds */
   lastUnit?: 'ms' | 's' | 'm' | 'h' | 'd';
   /** Time checkpoints with callback functions */
   checkpoints?: Array<{
     time: number;
-    callback: () => void;
+    callback: () => any;
   }>;
-  // React children components
-  children: React.ReactNode;
 }
 
 interface TimerState extends TimeParts {

@@ -2,6 +2,7 @@ import { useState, useMemo, useCallback, useEffect } from "react";
 import {
   Unit,
   Checkpoints,
+  TimeParts,
   Direction,
   TimerValue,
 } from '../types';

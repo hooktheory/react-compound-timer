@@ -1,6 +1,6 @@
 {
   "name": "react-compound-timer",
-  "version": "1.1.16",
+  "version": "1.2.0",
   "description": "Timer compound react component",
   "main": "build",
   "types": "build",
@@ -12,30 +12,41 @@
     "stopwatch"
   ],
   "homepage": "https://github.com/volkov97/react-compound-timer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/volkov97/react-compound-timer"
+  },
   "scripts": {
+    "start": "npx styleguidist server",
+    "build": "npx styleguidist build",
     "test": "jest",
     "transpile": "tsc",
-    "lint": "eslint .",
-    "typeсheck": "tsc --noEmit",
     "prepublishOnly": "npm run transpile"
   },
-  "author": "German Volkov <volkov.german.1997@gmail.com> (https://volkov97.com)",
+  "author": "German Volkov <Volkov.german.1997@gmail.com> (https://volkov97.com)",
   "license": "ISC",
   "devDependencies": {
-    "@types/jest": "29.5.3",
-    "@types/react": "16.8.14",
-    "@types/react-dom": "16.8.4",
-    "@typescript-eslint/eslint-plugin": "6.2.0",
-    "@typescript-eslint/parser": "6.2.0",
-    "eslint": "8.46.0",
-    "eslint-plugin-react": "7.33.0",
-    "jest": "29.6.2",
-    "jest-environment-jsdom": "29.6.2",
-    "react-dom": "16.8.6",
-    "ts-jest": "29.1.1",
-    "typescript": "5.1.6"
+    "@types/jest": "^24.0.11",
+    "@types/react": "^16.8.14",
+    "acorn": "^6.4.1",
+    "bufferutil": "^4.0.1",
+    "canvas": "^2.6.1",
+    "jest": "^25.1.0",
+    "react": "^16.8.6",
+    "react-docgen-typescript": "^1.16.3",
+    "react-dom": "^16.13.0",
+    "react-styleguidist": "^11.0.3",
+    "ts-jest": "^25.2.1",
+    "ts-loader": "^5.3.3",
+    "tslint": "^5.12.1",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.3.3",
+    "utf-8-validate": "^5.0.2",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
   },
   "peerDependencies": {
-    "react": "16.8.6"
+    "react": "^16.8.6"
   }
 }
